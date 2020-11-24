@@ -35,3 +35,10 @@ console.log(0 / 0);
 console.log(3/0); // Infinity 반환 : 분모가 0일 때
 console.log(0/3); // 분자가 0이면 0반환
 
+
+// 단항연산자
+var value = "7";
+console.log(typeof +value); //number로 변환
+console.log(typeof Number(value)) //number로 변환
+
+console.log(!!"A");// "", '' : 빈문자열 = false  "A",'a'는 값이므로 true
