@@ -58,3 +58,25 @@ console.log(value === null); // 타입이 다르므로 false
 // 통상적으로 비교하는 코드를 작성할 때는 일치 연산자(===)를 사용한다. 값과 타입까지 비교하기 때문에 안전하다.
 
 // !== : 값 또는 타입이 다르면 true , 일치하면 false
+
+
+
+ // value5는 변숫값이 undefined이므로 fasle, zero 변숫값이 0이므로 false, two 변숫값이 2이므로 true => two 변숫값을 반환
+// true가 아니라 true가 되는 변숫값을 반환.
+ var value5, zero = 0, two = 2;
+console.log(value5 || zero || two);
+console.log(zero || value5); // 마지막까지 비교했는데도 모두가 false이면 false를 반환하는 것이 아니라 마지막 변숫값(value5=undefined) 반환
+
+
+// 왼쪽의 결과가 true이므로 오른쪽은 비교하지 않는다. 오른쪽을 비교하면 three 변수가 없으므로 에러 발생
+var one = 1;
+console.log(one === 1 || three === 3);
+
+console.log(one && two); // 왼쪽이 true이기 때문에 오른쪽 확인. 모두 true이기 때문에 가장 오른쪽에 있는 변수(two2)의 값을 반환
+
+console.log(one && zero && nine); // zero 변숫값이 0이므로 false => 오른쪽 값을 비교하지 않고 zero 변숫값인 0 반환. nine을 비교하면 변수가 없으므로 에러 발생
+
+
+// 조건 연산자
+console.log(1 === 1 ? "같음" : "다름");
+console.log(1 === "1" ? "같음" : "다름");
