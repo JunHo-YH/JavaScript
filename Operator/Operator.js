@@ -42,3 +42,19 @@ console.log(typeof +value); //number로 변환
 console.log(typeof Number(value)) //number로 변환
 
 console.log(!!"A");// "", '' : 빈문자열 = false  "A",'a'는 값이므로 true
+
+console.log(1 == "1"); //문자 타입을 숫자 타입으로 변환하여 비교 => true
+
+var value2; // undefined
+console.log(value2 == undefined); // true
+
+var value3;
+console.log(value3 == null); // undefined와 null을 비교하면 true
+
+console.log(1 === "1"); // ===은 값과 타입이 같아야하기 때문에, 값은 같지만 타입이 다르므로 false 반환
+
+var value4;
+console.log(value === null); // 타입이 다르므로 false
+// 통상적으로 비교하는 코드를 작성할 때는 일치 연산자(===)를 사용한다. 값과 타입까지 비교하기 때문에 안전하다.
+
+// !== : 값 또는 타입이 다르면 true , 일치하면 false
